@@ -1,16 +1,28 @@
 ﻿using System;
-using System.Globalization;
-using System.Collections.Generic;
+using ParaPraticar.Entities.Enums;
+using ParaPraticar.Entities;
 
 namespace ParaPraticar
 {
     class Program
     {
         static void Main(string[] args)
-        {               
-            //Criação de um repositório local e depois transferir para o repositório remoto
+        {
+            Order order = new Order
+            {
+                Id = 1080,
+                Moment = DateTime.Now,
+                Status = OrderStatus.PendingPayment
+            };
+            Console.WriteLine(order);
 
-            Console.WriteLine("Teste de alteração do git");
+            string txt = OrderStatus.PendingPayment.ToString();
+
+            OrderStatus os = Enum.Parse<OrderStatus>("Delivered");
+
+            Console.WriteLine(txt);
+            Console.WriteLine(os);
+
         }
     }
 }
