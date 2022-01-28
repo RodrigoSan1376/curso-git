@@ -4,12 +4,10 @@ using System.Text;
 
 namespace ParaPraticar.Entities.Enums
 {
-    enum OrderStatus : int
+    enum WorkerLevel : int
     {
-        PendingPayment = 0,
-        Processing = 1,
-        Shipped = 2,
-        Delivered = 3
-
+        Junior = 0,
+        MidLevel = 1,
+        Senior = 2
     }
 }
